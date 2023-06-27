@@ -1,0 +1,92 @@
+_schema-version: "3.2"
+ID: OdataAsyn
+version: 0.0.1
+modules:
+- name: OdataAsyn-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: OdataAsyn-destination-service
+    parameters:
+      content-target: true
+  - name: OdataAsyn_html_repo_host
+    parameters:
+      service-key:
+        name: OdataAsyn_html_repo_host-key
+  - name: uaa_OdataAsyn
+    parameters:
+      service-key:
+        name: uaa_OdataAsyn-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: employeerouter_OdataAsyn_html_repo_host
+          ServiceInstanceName: OdataAsyn-html5-app-host-service
+          ServiceKeyName: OdataAsyn_html_repo_host-key
+          sap.cloud.service: employeerouter
+        - Authentication: OAuth2UserTokenExchange
+          Name: employeerouter_uaa_OdataAsyn
+          ServiceInstanceName: OdataAsyn-xsuaa-service
+          ServiceKeyName: uaa_OdataAsyn-key
+          sap.cloud.service: employeerouter
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: OdataAsyn-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: OdataAsyn_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - nsproject1.zip
+      name: nsproject1
+      target-path: resources/
+- name: nsproject1
+  type: html5
+  path: project1
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: OdataAsyn-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: OdataAsyn-destination-service
+    service-plan: lite
+- name: OdataAsyn_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: OdataAsyn-html5-app-host-service
+    service-plan: app-host
+- name: uaa_OdataAsyn
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: OdataAsyn-xsuaa-service
+    service-plan: application
+parameters:
+  deploy_mode: html5-repo

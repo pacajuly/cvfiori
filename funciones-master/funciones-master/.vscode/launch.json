@@ -1,0 +1,144 @@
+{
+  "inputs": [
+    {
+      "id": "UI5Version",
+      "type": "command",
+      "command": "sap.ux.appGenerator.ui5Version"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Start array",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/array",
+      "windows": {
+        "runtimeExecutable": "npm.cmd",
+        "args": [
+          "--",
+          "--ui5"
+        ]
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Array/array\"}"
+      },
+      "args": [
+        "--",
+        "--ui5"
+      ]
+    },
+    {
+      "name": "Start array Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/array",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd",
+        "args": [
+          "--",
+          "--ui5"
+        ]
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-mock"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Array/array\"}"
+      },
+      "args": [
+        "--",
+        "--ui5"
+      ]
+    },
+    {
+      "name": "Start array Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/array",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Array/array\"}"
+      }
+    },
+    {
+      "name": "array",
+      "cwd": "${workspaceFolder}/array",
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "args": [
+        "--",
+        "--ui5"
+      ],
+      "windows": {
+        "runtimeExecutable": "npm.cmd",
+        "args": [
+          "--",
+          "--ui5"
+        ]
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Array/array\"}"
+      }
+    },
+    {
+      "name": "array",
+      "cwd": "${workspaceFolder}/array",
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "args": [
+        "--",
+        "--ui5"
+      ],
+      "windows": {
+        "runtimeExecutable": "npm.cmd",
+        "args": [
+          "--",
+          "--ui5"
+        ]
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Array/array\"}"
+      }
+    }
+  ],
+  "compounds": [],
+  "version": "0.2.0"
+}

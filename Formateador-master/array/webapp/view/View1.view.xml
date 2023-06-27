@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="ns.array.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+                 <Label text="Ingrese el importe"/>
+			     <Input id="importe" />
+				<Button text="Find" press="onPressFind"   />
+                <Button text="FOREACH" press="onPressFOREACH"   />
+                <Button text="MAP" press="onPressMAP"   />
+                <Button text="REDUCE" press="onPressReduce"   />
+                <Button text="Push" press="onPressPush"   />
+                <Button text="Pop" press="onPressPop"   />
+                <Button text="unshift" press="onPressUnshift"   />
+                <Button text="shift" press="onPressShift"   />
+                 <Button text="filter" press="onPressFilter"   />
+
+
+      <List id="productList"
+                    headerText="{i18n>productListTitle}" 
+                    class="sapUiResposiveMargin" 
+                    width="auto" 
+                    items="{ path : 'products>/Products',
+                            sorter : { path : 'ProductName',
+                                        group : true }
+                            }">
+        <headerToolbar>
+            <Toolbar >
+                <Title text="{i18n>productsListTitle}"/>
+                <ToolbarSpacer/>
+                <SearchField width="50%" search=".onFilterProducts"/>
+            </Toolbar>
+        </headerToolbar>
+        <items>
+            <ObjectListItem title="{products>UnitsInStock} - {products>ProductName}"
+                            number="{ parts : [ {path : 'products>UnitPrice'},
+                                                {path : 'currency>/usd'}],
+                                      type: 'sap.ui.model.type.Currency'
+                                    }"
+                        
+                            >
+             
+            </ObjectListItem>
+        </items>
+    </List>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

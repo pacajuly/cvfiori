@@ -1,0 +1,32 @@
+<mvc:View
+    controllerName="ns.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content >
+
+                    <ObjectHeader id="objectheaderid" binding="{/Empleados}" title="{ProductName}"
+											number="{UnitPrice}"
+											numberUnit="{CurrencyCode}">
+											<statuses>
+												<ObjectStatus text="Some Damaged" state="Error"/>
+												<ObjectStatus text="In Stock" state="Success"/>
+											</statuses>
+											<attributes>
+												<ObjectAttribute text="{SupplierID}"/>
+												<ObjectAttribute text="{CategoryID}"/>
+												<ObjectAttribute text="{QuantityPerUnit}"/>
+												<ObjectAttribute text="www.sapspot.com" active="true"/>
+											</attributes>
+										</ObjectHeader>
+                  </content >
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

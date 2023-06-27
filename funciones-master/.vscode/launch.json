@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "array-config1",
+      "cwd": "${workspaceFolder}/funciones-master/array",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "index.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/ModulosFragmentos-master/Formateador-master/funciones-master/funciones-master/array\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap/opu/odata\",\"url\":\"http://localhost\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false&sap-ui-support=true",
+        "FIORI_TOOLS_UI5_VERSION": "1.115.0",
+        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com"
+      }
+    }
+  ]
+}

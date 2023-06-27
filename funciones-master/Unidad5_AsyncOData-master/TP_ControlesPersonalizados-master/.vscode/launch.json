@@ -1,0 +1,122 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "sapui5-config1",
+      "cwd": "${workspaceFolder}/TP_ControlesPersonalizados-master/sapui5",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "index.html",
+        "--config",
+        "ui5-mock.yaml"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/ModulosFragmentos-master/Formateador-master/funciones-master/Unidad5_AsyncOData-master/TP_ControlesPersonalizados-master/TP_ControlesPersonalizados-master/sapui5\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap/opu/odata\",\"url\":\"http://localhost\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false&sap-ui-support=true",
+        "FIORI_TOOLS_UI5_VERSION": "1.115.0",
+        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com"
+      }
+    },
+    {
+      "name": "sapui5-config2",
+      "cwd": "${workspaceFolder}/TP_ControlesPersonalizados-master/sapui5",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/mockServer.html",
+        "--config",
+        "ui5-mock.yaml"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/ModulosFragmentos-master/Formateador-master/funciones-master/Unidad5_AsyncOData-master/TP_ControlesPersonalizados-master/TP_ControlesPersonalizados-master/sapui5\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap/opu/odata\",\"url\":\"http://localhost\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false&sap-ui-support=true",
+        "FIORI_TOOLS_UI5_VERSION": "1.115.0",
+        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com"
+      }
+    },
+    {
+      "name": "sapui5-config3",
+      "cwd": "${workspaceFolder}/TP_ControlesPersonalizados-master/sapui5",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/integration/opaTests.qunit.html",
+        "--config",
+        "ui5-mock.yaml"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/ModulosFragmentos-master/Formateador-master/funciones-master/Unidad5_AsyncOData-master/TP_ControlesPersonalizados-master/TP_ControlesPersonalizados-master/sapui5\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"destination\":\"ES5\",\"path\":\"/sap/opu/odata\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false&sap-ui-support=true",
+        "FIORI_TOOLS_UI5_VERSION": "1.115.0",
+        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com"
+      }
+    },
+    {
+      "name": "sapui5-config4",
+      "cwd": "${workspaceFolder}/TP_ControlesPersonalizados-master/sapui5",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/unit/unitTests.qunit.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "FIORI_TOOLS_UI5_VERSION": "1.115.0",
+        "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/ModulosFragmentos-master/Formateador-master/funciones-master/Unidad5_AsyncOData-master/TP_ControlesPersonalizados-master/TP_ControlesPersonalizados-master/sapui5\"}"
+      }
+    }
+  ]
+}
